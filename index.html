@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<!--
+    KUREAS - Suite portal / module index
+
+    Static landing page for the KUREAS suite. Styling tokens are intentionally
+    aligned with KUREAS-FTL.html, KUREAS-HA.html, KUREAS-SYS.html, and the
+    KUREAS-*_Walkthrough_Guide.html documents so that this page reads as the
+    repository's own front matter.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUREAS - Suite Overview</title>
+    <meta name="description" content="KUREAS is an open-source, browser-based suite for facility reliability analysis and probabilistic risk assessment (PRA), with SAPHIRE and OpenPSA file-format interoperability.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEzUlEQVR4AcRXSUxUWRQ9r4oZmZpBpGkGATdudKUrh5hoXLgEosbExKEdAJV2ionzEDXRxKgxNmgjLETAGIdoTEx04caliImhAYONAgKFNHSoiaq+99f313/1XxVVHZP+4f733rn3vnv+rffvv9jwP18agcrKSv+PliraUyXmOPzsGgGetLW1gaW1uRl/HDmCxj170FhXBx6bz59HW2urpmebiEJ2zRcuoKGmBg27d+P3Xbs04XXTmTPGHhyTxSDAC/j9cH/+jD+3bkXnsmXoXL4c71auxJdr1+BzuTSTiLeZGTieP8c73bdzxQrNv2vVKvQSIe/4uMVdJsBqIgGfD5IwxrpI4vXC8ewZerdtg2tgIGhpsyF18WJUUGbTliwJ4vrMSkBXxDTowXu2b4eLMmj4UvD0pUux4M4dzFm0yIDNEysBIcz6wDxSBjj406fg4O7BwYA93yl4Jv0UC5qakLJwISNKsRJQmqlBPwUfe/IE3XRm3ENDQSMKnrV6Ncpv30ZSRUUQV8wkAn4yEELOgD/M0/s8How9fKg9uXdkhDz1Pwr+07p1KG9oQFJpqQ6GHyQC4c1kjRb8wQP07tgBT0jw3MpKlN+4gcTCQtkpzEoiIIQAZ8Fsy/kwZ4HT7rh/H730fntGRw1TQU+et2kT5l+9ioR58wx8tolEYDZjP6V9lApWz86d8I6NBc0peD69fvMvXUJ8bm4Qj2JmISCEnAV+ei0LHPzePe3Jvd++GVsLux0FtbUopuoXl51t4NFOLARUjn63G19bWtBDafdOTARNiGze5s0oPnUKcRkZQTyGmZUAbSoEP7O+C70Fw1RI+vbuxczkpA7qA+n+fv0azo8fdSD2wUpAsYdvehp8+BQqOLu78enkSfltUBmGwaIiEMZXg/mMOB4/xtDNm+CfSgNjuMVEwJaUhNLLl1HR2Ah7aqoRhrPzhfBx+hLyF9VQRDGJmgAHL6G+oIC+8TlVVZi7ZYu0vYc+tf1Hj2L6wwcJn21hJWA+gLq3FvzcOeRT5RMJCbCnpaGADmXo5/Wft2/x6fRpeB0ORHtZCSg88zZuxFz64NgSEw1tUkkJiujwxefkGBhPRjs6MNzUFPV5UBMIyYJITgao4HAAQ8gmgzqegn37IOLiDJir5cDFi5h49Qp+bmwMjXqiJqC2taCckXzKTNbatZLOMzyM/mPH4Orrk3DVwqYCLRgVHGEBA0B8Xh6K6PAll5UFAP0++eYN/qJMzJgrp64zD9ERMHso5tzz/Xz4MOwpKZJ2pKUFX+/ehY9KuaQwLX4IAT4DufRq5qxfD9DZgH75nE4MnD2LKcoGKIs6LA1qArSJEHLSueJJniELe3o6Cg8exBzqgM0kuEPuP34czv5+qPZQE8B/u5LLy/ELnYe4zExpg4mXLzF45Qp8U1MSzgslASHUPQE7RBRqTLLWrAkULHo1uUsCYSxDt25hjNo4SoO0hYWAPTNT26D4xAkUsVCxyaYmkyug5BlmYaOaUVhfj7Lr17U+gYsVS+GhQ2AioW4GgSo6RCwbqLWqpf9w9nd14cD79zhA46/UXldTNWR9NLKBGpe6Fy9QT6V5f2cnWH6jec2jR6iqrgbv8Z2IRqC9vV1I0tEh2gj7LpKO8FjWkWyZxL8AAAD//4MEZNkAAAAGSURBVAMAE0k4X2fO1c4AAAAASUVORK5CYII=" type="image/png">
+    <style>
+        *,*::before,*::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        .main-content { max-width: 1040px; margin: 0 auto; padding: 32px 48px 80px 48px; }
+
+        .page-section { margin-bottom: 56px; scroll-margin-top: 72px; }
+        .page-section h2 {
+            font-size: 24px; font-weight: 700; color: #1e40af;
+            border-bottom: 2px solid #dbeafe; padding-bottom: 8px; margin: 0 0 20px 0;
+        }
+        .page-section h3 { font-size: 18px; font-weight: 600; color: #1e293b; margin: 24px 0 12px 0; }
+        .page-section p  { line-height: 1.7; margin: 0 0 12px 0; color: #334155; }
+        .lede { font-size: 16px; color: #475569; line-height: 1.7; margin-bottom: 16px; }
+
+        .pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.02em; }
+        .pill-blue  { background: #dbeafe; color: #1e40af; }
+        .pill-gray  { background: #f1f5f9; color: #475569; }
+        .pill-amber { background: #fef3c7; color: #92400e; }
+        .pill-green { background: #d1fae5; color: #065f46; }
+
+        .module-card {
+            display: flex; flex-direction: column; gap: 10px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px 20px;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .module-card:hover { border-color: #bfdbfe; box-shadow: 0 6px 16px rgba(30, 64, 175, 0.08); }
+        .module-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .module-head h3 { margin: 0; font-size: 17px; font-weight: 700; color: #0f172a; letter-spacing: -0.01em; }
+        .module-card p  { margin: 0; font-size: 14px; line-height: 1.55; color: #475569; }
+
+        .module-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 12px; border-radius: 6px; font-size: 13px; font-weight: 600;
+            text-decoration: none; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+        .btn-primary   { background: #2563eb; color: #ffffff; }
+        .btn-primary:hover { background: #1d4ed8; }
+        .btn-secondary { background: #ffffff; color: #1e3a8a; border: 1px solid #cbd5e1; }
+        .btn-secondary:hover { background: #f1f5f9; border-color: #94a3b8; }
+
+        .feature-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .feature-tag { padding: 2px 8px; border-radius: 4px; background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 500; }
+
+        .callout { border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 14px; line-height: 1.65; }
+        .callout strong { display: block; margin-bottom: 4px; }
+        .callout-info { background: #eff6ff; border-left: 4px solid #3b82f6; color: #1e40af; }
+        .callout-tip  { background: #f0fdf4; border-left: 4px solid #22c55e; color: #166534; }
+        .callout-warn { background: #fefce8; border-left: 4px solid #eab308; color: #854d0e; }
+
+        .guide-table { width: 100%; border-collapse: collapse; margin: 12px 0 4px; font-size: 14px; background: #ffffff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); }
+        .guide-table th { background: #1e40af; color: #ffffff; text-align: left; padding: 10px 14px; font-weight: 600; font-size: 13px; }
+        .guide-table th:first-child { border-radius: 6px 0 0 0; }
+        .guide-table th:last-child  { border-radius: 0 6px 0 0; }
+        .guide-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; color: #334155; }
+        .guide-table tr:last-child td { border-bottom: none; }
+        .guide-table tr:nth-child(even) td { background: #f8fafc; }
+        .guide-table code { background: #f1f5f9; color: #be185d; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+
+        code.inline { background: #f1f5f9; color: #be185d; padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+
+        .file-list { list-style: none; padding: 0; margin: 0; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+        .file-list li { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+        .file-list li:last-child { border-bottom: none; }
+        .file-list a { font-weight: 600; color: #1d4ed8; text-decoration: none; }
+        .file-list a:hover { text-decoration: underline; }
+        .file-list .file-meta { color: #64748b; font-size: 13px; }
+        .file-list .file-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b; }
+
+        .ascii-diagram { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; overflow-x: auto; }
+        .ascii-diagram pre { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12.5px; line-height: 1.55; color: #1e293b; }
+
+        .tabbar { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid #e2e8f0; margin-bottom: 16px; }
+        .tabbar button {
+            padding: 8px 14px;
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid transparent;
+            color: #475569;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+        .tabbar button:hover { color: #1e40af; }
+        .tabbar button[aria-selected="true"] { color: #1e40af; border-bottom-color: #1e40af; }
+        .tab-panel[hidden] { display: none; }
+        .tab-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 18px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+        }
+        .tab-panel h3 { margin-top: 0; }
+        .tab-panel ul { margin: 8px 0 0; padding-left: 18px; color: #334155; font-size: 14px; line-height: 1.6; }
+        .tab-panel ul li + li { margin-top: 4px; }
+
+        .ref-list { padding-left: 18px; }
+        .ref-list li { margin-bottom: 8px; line-height: 1.6; color: #334155; }
+        .ref-list strong { color: #1e293b; }
+
+        .footer {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+            margin-top: 12px;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .footer a { color: #1d4ed8; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 900px) {
+            .main-content { padding: 24px 24px 64px 24px; }
+            .tab-panel { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .main-content { padding: 20px 16px 56px 16px; }
+        }
+
+        @media print {
+            header.no-print, .no-print { display: none !important; }
+            body { background: #ffffff; }
+            .main-content { max-width: 100%; padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="bg-blue-600 text-white p-3 shadow-lg fixed top-0 left-0 right-0 z-50 no-print" style="height:56px;">
+    <div class="flex items-center justify-between h-full" style="max-width:1040px;margin:0 auto;padding:0 12px;">
+        <a href="#top" class="flex items-center gap-3" style="text-decoration:none;color:inherit;">
+            <h1 class="text-lg font-bold" style="margin:0;">KUREAS</h1>
+            <span class="text-sm opacity-90 hidden sm:inline">Suite Overview</span>
+        </a>
+        <nav class="flex flex-wrap items-center gap-1 sm:gap-2 text-sm">
+            <a class="px-2 py-1 rounded hover:bg-blue-700" href="#modules">Modules</a>
+            <a class="px-2 py-1 rounded hover:bg-blue-700 hidden sm:inline" href="#concerns">By concern</a>
+            <a class="px-2 py-1 rounded hover:bg-blue-700 hidden md:inline" href="#guides">Guides &amp; QA</a>
+            <a class="px-2 py-1 rounded hover:bg-blue-700 hidden md:inline" href="#data-flow">Data flow</a>
+            <a class="px-2 py-1 rounded hover:bg-blue-700 hidden lg:inline" href="#files">File formats</a>
+            <a class="px-3 py-1.5 rounded bg-blue-900 hover:bg-blue-800 font-semibold" href="README.md">README</a>
+        </nav>
+    </div>
+</header>
+<div style="height:56px"></div>
+
+<main class="main-content" id="top">
+
+    <section style="padding: 24px 0 32px 0; border-bottom: 3px solid #1e40af; margin-bottom: 40px;">
+        <h1 style="font-size: 32px; font-weight: 800; color: #1e40af; margin: 0 0 10px 0; letter-spacing: -0.01em;">
+            Knowledgebase with Uncertainty for Risk Engineering Analysis of Systems
+        </h1>
+        <p style="font-size: 15px; color: #64748b; margin: 0 0 18px 0;">
+            KUREAS (pronounced &ldquo;curious&rdquo;) &mdash; an open-source suite of browser-based modules for facility reliability analysis and probabilistic risk assessment (PRA).
+        </p>
+        <p class="lede">
+            Each module is a single-file HTML application: no server, no build step, no installation. Open any module directly from this repository in a modern browser and load local project files. The suite implements SAPHIRE MAR-D file formats per NUREG/CR-7039 and exports to the OpenPSA Model Exchange Format.
+        </p>
+        <div class="flex flex-wrap items-center gap-2" style="margin-top: 10px;">
+            <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" class="h-5">
+            <img src="https://img.shields.io/badge/platform-browser-green.svg" alt="Platform: Browser" class="h-5">
+            <img src="https://img.shields.io/badge/framework-React_18-61dafb.svg" alt="React 18" class="h-5">
+            <img src="https://img.shields.io/badge/styling-Tailwind_CSS-38bdf8.svg" alt="Tailwind CSS" class="h-5">
+            <img src="https://img.shields.io/badge/server-none_required-orange.svg" alt="No server required" class="h-5">
+        </div>
+
+        <div class="callout callout-info" style="margin-top: 24px;">
+            <strong>Quick start</strong>
+            Open any <code class="inline">.html</code> file in Chrome, Edge, Firefox, or Safari. Dependencies (React, Tailwind, Mermaid) load from CDNs at runtime. Project state is exchanged through downloadable <code class="inline">.KNOW*</code> files and SAPHIRE-compatible <code class="inline">.FTL</code>, <code class="inline">.BED</code>, <code class="inline">.BEI</code>, <code class="inline">.ETL</code>, and <code class="inline">.SQC</code> files. There is no step 3.
+        </div>
+    </section>
+
+    <section class="page-section" id="modules">
+        <h2>Module Launch Board</h2>
+        <p class="lede">
+            Six primary modules cover the analysis chain from hazard screening to report assembly. Each module is independently launchable; the natural workflow is iterative rather than strictly sequential.
+        </p>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+
+            <article class="module-card">
+                <div class="module-head">
+                    <h3>KUREAS-HA &mdash; Hazard Analysis</h3>
+                    <span class="pill pill-blue">v1.1</span>
+                </div>
+                <p>4-level hierarchical hazard list, multi-state initiating-event frequency quantification with lognormal / normal / gamma / beta / uniform / log-uniform / histogram / CNI distributions, NUREG-2169 fire ignition Table&nbsp;4-4 with propagation factors, hazard curves, and screening with preserved rationale.</p>
+                <div class="feature-tags">
+                    <span class="feature-tag">Operating states</span>
+                    <span class="feature-tag">Frequency / opportunity / hazard curve</span>
+                    <span class="feature-tag">NUREG-2169 fire</span>
+                    <span class="feature-tag">.BEI / .BED / .FTL export</span>
+                    <span class="feature-tag">Word + Markdown + CSV</span>
+                </div>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="HA/KUREAS-HA.html">Open KUREAS-HA</a>
+                    <a class="btn btn-secondary" href="Models/HA/Area_52.KNOW_HA">Sample .KNOW_HA</a>
+                </div>
+            </article>
+
+            <article class="module-card">
+                <div class="module-head">
+                    <h3>KUREAS-FTL &mdash; Fault Tree Logic Editor</h3>
+                    <span class="pill pill-blue">v1.3</span>
+                </div>
+                <p>Authoring, visualization, and analysis of fault trees with AND / OR / NOT / NAND / N-of-M voting / Transfer gates. Scope-aware shared-node editing, append-only change log with 50-level undo, cut-set load from <code class="inline">.FTC</code>, MCUB top-event probability, and round-trip with SAPHIRE MAR-D and OpenPSA MEF.</p>
+                <div class="feature-tags">
+                    <span class="feature-tag">SAPHIRE .FTL / .BEI / .BED / .GTD / .FTC</span>
+                    <span class="feature-tag">OpenPSA MEF XML</span>
+                    <span class="feature-tag">Transfer-gate resolution</span>
+                    <span class="feature-tag">Cut sets</span>
+                    <span class="feature-tag">IndexedDB persistence</span>
+                </div>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="FTL/KUREAS-FTL.html">Open KUREAS-FTL</a>
+                    <a class="btn btn-secondary" href="FTL/KUREAS-FTL_Walkthrough_Guide.html">Walkthrough</a>
+                    <a class="btn btn-secondary" href="FTL/KUREAS-FTL-TestSuite.html">Test suite</a>
+                </div>
+            </article>
+
+            <article class="module-card">
+                <div class="module-head">
+                    <h3>KUREAS-ETL &mdash; Event Tree Logic</h3>
+                    <span class="pill pill-blue">v1.0</span>
+                </div>
+                <p>Browser-based event tree visualization implementing a backwards-recursive layout algorithm that matches SAPHIRE branch placement. Loads <code class="inline">.ETL</code> headers, top-event types, logic sections, and sequence metadata; enriches sequences with <code class="inline">.BED</code> / <code class="inline">.BEI</code> / <code class="inline">.SQC</code>.</p>
+                <div class="feature-tags">
+                    <span class="feature-tag">SAPHIRE .ETL import</span>
+                    <span class="feature-tag">Sequence cut sets (.SQC)</span>
+                    <span class="feature-tag">Color / grayscale / B&amp;W</span>
+                    <span class="feature-tag">Multi-tree navigation</span>
+                </div>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="ETL/KUREAS-ETL.html">Open KUREAS-ETL</a>
+                    <a class="btn btn-secondary" href="Models/SAPHIRE/Generic-PWR-Model-SAPHIRE-MARD.zip">Sample SAPHIRE model</a>
+                </div>
+            </article>
+
+            <article class="module-card">
+                <div class="module-head">
+                    <h3>KUREAS-SYS &mdash; System Evaluation</h3>
+                    <span class="pill pill-blue">v1.6</span>
+                </div>
+                <p>Six-pane workspace for SSC inventory, failure-mode parameters, a "How the System Works" logic editor, derived failure logic, FMEA, P&amp;ID (ISA-5.1), supercomponents, beta-factor CCF, importance measures (RIR, RRR, PC, SWIM), and design comparison. Loads <code class="inline">.relDB</code> and <code class="inline">.fmeaDB</code> reliability databases.</p>
+                <div class="feature-tags">
+                    <span class="feature-tag">SSCs &amp; failure modes</span>
+                    <span class="feature-tag">System logic &rarr; fault tree</span>
+                    <span class="feature-tag">MCUB / BDD</span>
+                    <span class="feature-tag">CCF beta factor</span>
+                    <span class="feature-tag">Reliability Designer&trade;</span>
+                </div>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="SYS/KUREAS-SYS.html">Open KUREAS-SYS</a>
+                    <a class="btn btn-secondary" href="SYS/KUREAS-SYS_Walkthrough_Guide.html">Walkthrough</a>
+                    <a class="btn btn-secondary" href="SYS/KUREAS-SYS-Workflow.html">Workflow diagram</a>
+                </div>
+            </article>
+
+            <article class="module-card">
+                <div class="module-head">
+                    <h3>KUREAS-SEQ &mdash; Process Operational Logic</h3>
+                    <span class="pill pill-amber">Planned / early</span>
+                </div>
+                <p>Process Operational Logic (POL) diagrams that capture the progression from initiating events through system responses to end states. Imports <code class="inline">HA_*.KNOW</code> for initiating-event frequencies; generates event-tree structures from POL logic. Listed as a planned module in the README; an HTML entry point is included for continuity.</p>
+                <div class="feature-tags">
+                    <span class="feature-tag">POL diagrams (Mermaid.js)</span>
+                    <span class="feature-tag">Shared sub-diagrams</span>
+                    <span class="feature-tag">Boundary conditions</span>
+                    <span class="feature-tag">Event-tree generation</span>
+                </div>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="SEQ/KUREAS-SEQ.html">Open KUREAS-SEQ</a>
+                    <a class="btn btn-secondary" href="SEQ/KUREAS-SEQ_Help.docx">Help (.docx)</a>
+                </div>
+            </article>
+
+            <article class="module-card">
+                <div class="module-head">
+                    <h3>KUREAS-REPORT &mdash; Report Generator</h3>
+                    <span class="pill pill-blue">v1.0</span>
+                </div>
+                <p>Integration hub that assembles <code class="inline">.KNOW_RPT</code> exports from HA, SYS, and SEQ into reviewable analysis reports. Drag-and-drop element ordering, reusable insertable sections (<code class="inline">.ELEMENTS</code>), reference manager, acronym generation, captions and Word page numbering, and auto-update when source <code class="inline">.KNOW_RPT</code> files are replaced.</p>
+                <div class="feature-tags">
+                    <span class="feature-tag">Multi-source assembly</span>
+                    <span class="feature-tag">References &amp; acronyms</span>
+                    <span class="feature-tag">.docx export</span>
+                    <span class="feature-tag">.KNOW_REPORT persistence</span>
+                </div>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="REPORT/KUREAS-REPORT.html">Open KUREAS-REPORT</a>
+                    <a class="btn btn-secondary" href="REPORT/KUREAS-REPORT-Help.html">Report help</a>
+                </div>
+            </article>
+
+        </div>
+
+        <p style="margin-top: 18px; font-size: 13px; color: #64748b;">
+            <strong style="color:#1e293b;">KUREAS-KNOW</strong> (general-purpose <code class="inline">.KNOW</code> viewer/editor) is listed as planned in the README; no standalone <code class="inline">KUREAS-KNOW.html</code> ships in this tree yet.
+        </p>
+    </section>
+
+    <section class="page-section" id="concerns">
+        <h2>Choose by Analyst Concern</h2>
+        <p class="lede">
+            The same model can be approached from initiating events, success criteria, accident progression, file-format interchange, or evidence packaging. These views point to the relevant module and the artifacts it produces.
+        </p>
+
+        <div class="tabbar" role="tablist" aria-label="Analyst concerns">
+            <button role="tab" id="tab-ie"       data-tab="panel-ie"       aria-selected="true"  aria-controls="panel-ie">Initiating events</button>
+            <button role="tab" id="tab-systems"  data-tab="panel-systems"  aria-selected="false" aria-controls="panel-systems">Systems &amp; SSCs</button>
+            <button role="tab" id="tab-sequence" data-tab="panel-sequence" aria-selected="false" aria-controls="panel-sequence">Sequences</button>
+            <button role="tab" id="tab-exchange" data-tab="panel-exchange" aria-selected="false" aria-controls="panel-exchange">PRA exchange</button>
+            <button role="tab" id="tab-record"   data-tab="panel-record"   aria-selected="false" aria-controls="panel-record">Record package</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-ie" aria-labelledby="tab-ie">
+            <div>
+                <h3>What initiates the challenge, and why is it in scope?</h3>
+                <p><code class="inline">KUREAS-HA</code> owns hazard structure, operating-state exposure, screening basis, frequency models, and fire-ignition estimates. The initiating-event basis stays inspectable rather than collapsing into a single number copied downstream.</p>
+                <a class="btn btn-primary" href="HA/KUREAS-HA.html" style="margin-top: 4px;">Open Hazard Analysis</a>
+            </div>
+            <div>
+                <h3>Relevant artifacts</h3>
+                <ul>
+                    <li>Operating-state dependent hazard analysis with configurable time fractions.</li>
+                    <li>NUREG-2169 fire-ignition bins, component counts, and propagation factors.</li>
+                    <li>SAPHIRE-facing basic-event files (<code class="inline">.BEI</code>, <code class="inline">.BED</code>, <code class="inline">.FTL</code>) and <code class="inline">HA_*.KNOW</code> for downstream sequence work.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-systems" aria-labelledby="tab-systems" hidden>
+            <div>
+                <h3>What has to work, what can fail, and what dominates risk?</h3>
+                <p><code class="inline">KUREAS-SYS</code> joins SSC inventories, failure modes, success-criteria logic, FMEA / P&amp;ID context, derived fault-tree logic, common-cause failures, and importance measures in a single workspace.</p>
+                <a class="btn btn-primary" href="SYS/KUREAS-SYS.html" style="margin-top: 4px;">Open System Evaluation</a>
+            </div>
+            <div>
+                <h3>Relevant artifacts</h3>
+                <ul>
+                    <li>SSC + failure-mode records with explicit probability model and source.</li>
+                    <li><code class="inline">SYSTEM WORKS = &hellip;</code> logic compiled to a fault tree with MCUB / BDD cut sets.</li>
+                    <li>RIR, RRR, Probability of Contribution, and SWIM importance measures.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-sequence" aria-labelledby="tab-sequence" hidden>
+            <div>
+                <h3>How does the facility response progress after the challenge?</h3>
+                <p><code class="inline">KUREAS-SEQ</code> represents Process Operational Logic: not just rows of an event tree, but reusable facility-response structure linking initiating events, functions, systems, end states, and consequences.</p>
+                <a class="btn btn-primary" href="SEQ/KUREAS-SEQ.html" style="margin-top: 4px;">Open Process Operational Logic</a>
+            </div>
+            <div>
+                <h3>Relevant artifacts</h3>
+                <ul>
+                    <li>POL diagrams with reusable shared sub-diagrams (Mermaid.js).</li>
+                    <li>Boundary conditions (Boolean / State / Percent / User-Defined) including fire-ignition data.</li>
+                    <li>Event-tree structure generation from POL logic for downstream <code class="inline">.ETL</code> work.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-exchange" aria-labelledby="tab-exchange" hidden>
+            <div>
+                <h3>What needs to round-trip with the PRA ecosystem?</h3>
+                <p><code class="inline">KUREAS-FTL</code> and <code class="inline">KUREAS-ETL</code> are the bridge to legacy and standards-based PRA artifacts. SAPHIRE MAR-D and OpenPSA MEF stay first-class formats alongside the native <code class="inline">.KNOW*</code> files.</p>
+                <div class="module-actions">
+                    <a class="btn btn-primary" href="FTL/KUREAS-FTL.html">Open FTL</a>
+                    <a class="btn btn-secondary" href="ETL/KUREAS-ETL.html">Open ETL</a>
+                </div>
+            </div>
+            <div>
+                <h3>Relevant artifacts</h3>
+                <ul>
+                    <li>SAPHIRE MAR-D import / export: <code class="inline">.FTL</code>, <code class="inline">.BED</code>, <code class="inline">.BEI</code>, <code class="inline">.GTD</code>, <code class="inline">.FTC</code>.</li>
+                    <li>OpenPSA Model Exchange Format (<code class="inline">.xml</code>) for fault-tree interchange.</li>
+                    <li>Event-tree visualization from <code class="inline">.ETL</code> with sequence-level cut sets from <code class="inline">.SQC</code>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-record" aria-labelledby="tab-record" hidden>
+            <div>
+                <h3>What evidence will survive review?</h3>
+                <p>Module-level reports plus <code class="inline">KUREAS-REPORT</code> focus on traceability: selected tables, plots, references, generated diagrams, and reusable elements are assembled into a reviewer-facing record with Word page numbering and captions.</p>
+                <a class="btn btn-primary" href="REPORT/KUREAS-REPORT.html" style="margin-top: 4px;">Open Report Generator</a>
+            </div>
+            <div>
+                <h3>Relevant artifacts</h3>
+                <ul>
+                    <li><code class="inline">.KNOW_RPT</code> exports from HA, SYS, and SEQ for central assembly.</li>
+                    <li><code class="inline">.ELEMENTS</code> insertable boilerplate / reference packages.</li>
+                    <li><code class="inline">.docx</code> reports with TOC, captions, page numbering, and auto-update on <code class="inline">.KNOW_RPT</code> reload.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="data-flow">
+        <h2>Data Flow</h2>
+        <p class="lede">
+            Modules communicate through downloadable files rather than a backend API. The diagram below (from <a href="README.md" style="color:#1d4ed8;text-decoration:none;font-weight:600;">README.md</a>) shows typical handoffs; arrows are not a mandatory order.
+        </p>
+        <div class="ascii-diagram">
+<pre>  &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;           &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
+  &#9474;  KUREAS-HA   &#9474;           &#9474;  KUREAS-SYS  &#9474;
+  &#9474;  (Hazards)   &#9474;           &#9474;  (Systems)   &#9474;
+  &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;           &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;
+         &#9474; HA_*.KNOW                &#9474; .KNOW_SYS / .KNOW_FTL
+         &#9660;                          &#9660;
+  &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;           &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
+  &#9474;  KUREAS-SEQ  &#9474;           &#9474;  KUREAS-FTL  &#9474;
+  &#9474;  (Sequences) &#9474;           &#9474; (Fault Trees)&#9474;
+  &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;           &#9492;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;
+         &#9474; SEQ_*.KNOW          &#9474;    &#9474; .KNOW_FTL / .FTL
+         &#9660;                     &#9474;    &#9660;
+  &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;           &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
+  &#9474;  KUREAS-ETL  &#9474;&#9668;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9474;  SAPHIRE     &#9474;
+  &#9474; (Event Trees)&#9474;  .ETL     &#9474;  (external)  &#9474;
+  &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;           &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;
+         &#9474;
+         &#9660;  All .KNOW_RPT files
+  &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
+  &#9474; KUREAS-REPORT&#9474;
+  &#9474;  (Reports)   &#9474;
+  &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;</pre>
+        </div>
+        <p style="margin-top: 12px; font-size: 13px; color: #64748b;">
+            Modules are not strictly sequential &mdash; any module can be opened first, work can proceed in parallel, and the <code class="inline">.KNOW</code> file family is the integration bus.
+        </p>
+    </section>
+
+    <section class="page-section" id="guides">
+        <h2>Guides, Help &amp; Automated QA</h2>
+        <p class="lede">
+            Static HTML companions to the modules: practical walkthroughs, workflow references, help pages, and browser-based test harnesses included alongside the modules they cover.
+        </p>
+        <ul class="file-list">
+            <li>
+                <div>
+                    <a href="FTL/KUREAS-FTL_Walkthrough_Guide.html">KUREAS-FTL_Walkthrough_Guide.html</a>
+                    <div class="file-meta">Step-by-step exercises for SAPHIRE import, building a fault tree from scratch, scope-aware editing, MAR-D / OpenPSA export, and cut-set analysis.</div>
+                </div>
+                <span class="file-tag">FTL</span>
+            </li>
+            <li>
+                <div>
+                    <a href="FTL/KUREAS-FTL_Quick_Reference.pdf">KUREAS-FTL_Quick_Reference.pdf</a>
+                    <div class="file-meta">One-page reference for gate symbols, toolbar actions, keyboard shortcuts, and file formats.</div>
+                </div>
+                <span class="file-tag">FTL</span>
+            </li>
+            <li>
+                <div>
+                    <a href="SYS/KUREAS-SYS_Walkthrough_Guide.html">KUREAS-SYS_Walkthrough_Guide.html</a>
+                    <div class="file-meta">Practical walkthrough of the six-pane workspace, SSC editing, system logic, failure analysis, and report generation.</div>
+                </div>
+                <span class="file-tag">SYS</span>
+            </li>
+            <li>
+                <div>
+                    <a href="SYS/KUREAS-SYS-Workflow.html">KUREAS-SYS-Workflow.html</a>
+                    <div class="file-meta">Interactive workflow diagram showing how SSC, logic, FMEA, P&amp;ID, and importance-measure analyses fit together.</div>
+                </div>
+                <span class="file-tag">SYS</span>
+            </li>
+            <li>
+                <div>
+                    <a href="SYS/KUREAS-SYS_Quick_Reference.pdf">KUREAS-SYS_Quick_Reference.pdf</a>
+                    <div class="file-meta">Quick reference for SYS panes, logic keywords, probability types, and importance measures.</div>
+                </div>
+                <span class="file-tag">SYS</span>
+            </li>
+            <li>
+                <div>
+                    <a href="REPORT/KUREAS-REPORT-Help.html">KUREAS-REPORT-Help.html</a>
+                    <div class="file-meta">UI reference for report assembly, references, captions, and Word export.</div>
+                </div>
+                <span class="file-tag">REPORT</span>
+            </li>
+            <li>
+                <div>
+                    <a href="FTL/KUREAS-FTL-TestSuite.html">KUREAS-FTL-TestSuite.html</a>
+                    <div class="file-meta">Browser-based test harness for the FTL module: parsing, gate logic, cut-set generation, and exports.</div>
+                </div>
+                <span class="file-tag">QA</span>
+            </li>
+            <li>
+                <div>
+                    <a href="SYS/SQA/">SYS/SQA/</a>
+                    <div class="file-meta">Software quality assurance artifacts and test harness for the SYS module.</div>
+                </div>
+                <span class="file-tag">QA</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="page-section" id="files">
+        <h2>File Formats</h2>
+        <p class="lede">
+            Files are the integration bus. Native <code class="inline">.KNOW*</code> project files preserve the full engineering basis; SAPHIRE MAR-D and OpenPSA MEF formats provide round-trip with the broader PRA ecosystem.
+        </p>
+
+        <h3>KUREAS native files</h3>
+        <table class="guide-table">
+            <thead><tr><th>Pattern</th><th>Module</th><th>Contents</th></tr></thead>
+            <tbody>
+                <tr><td><code>HA_*.KNOW</code></td><td>KUREAS-HA</td><td>Hazard lists, analysis data, operating states, settings</td></tr>
+                <tr><td><code>*.KNOW_FTL</code></td><td>KUREAS-FTL</td><td>Fault tree logic, basic events, probabilities, notes, cut sets, change log</td></tr>
+                <tr><td><code>*.KNOW_SYS</code></td><td>KUREAS-SYS</td><td>SSC hierarchy, failure modes, system logic, supercomponents, boundary conditions</td></tr>
+                <tr><td><code>SEQ_*.KNOW</code></td><td>KUREAS-SEQ</td><td>POL diagrams, boundary conditions, operating state data</td></tr>
+                <tr><td><code>*.KNOW_REPORT</code></td><td>KUREAS-REPORT</td><td>Report structure, assembled elements, references, source data</td></tr>
+                <tr><td><code>*.ELEMENTS</code></td><td>KUREAS-REPORT</td><td>Reusable insertable report elements</td></tr>
+                <tr><td><code>*.relDB</code></td><td>KUREAS-SYS</td><td>CSV-format reliability database (system, SSC type, component type, failure modes, distributions)</td></tr>
+                <tr><td><code>*.fmeaDB</code></td><td>KUREAS-SYS</td><td>JSON-format FMEA database (full round-trip with severity, detection, mitigation)</td></tr>
+            </tbody>
+        </table>
+
+        <h3>SAPHIRE MAR-D interoperability</h3>
+        <table class="guide-table">
+            <thead><tr><th>Extension</th><th>Description</th><th>Used by</th></tr></thead>
+            <tbody>
+                <tr><td><code>.FTL</code></td><td>Fault tree logic</td><td>KUREAS-FTL (import/export), KUREAS-HA (export)</td></tr>
+                <tr><td><code>.BED</code></td><td>Basic event descriptions</td><td>KUREAS-FTL, KUREAS-ETL</td></tr>
+                <tr><td><code>.BEI</code></td><td>Basic event information (probabilities)</td><td>KUREAS-FTL, KUREAS-ETL</td></tr>
+                <tr><td><code>.GTD</code></td><td>Gate type descriptions</td><td>KUREAS-FTL</td></tr>
+                <tr><td><code>.FTC</code></td><td>Fault tree cut sets</td><td>KUREAS-FTL</td></tr>
+                <tr><td><code>.ETL</code></td><td>Event tree logic</td><td>KUREAS-ETL</td></tr>
+                <tr><td><code>.SQC</code></td><td>Sequence cut sets</td><td>KUREAS-ETL</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-info" style="margin-top: 18px;">
+            <strong>OpenPSA Model Exchange Format</strong>
+            KUREAS-FTL exports fault-tree structures to the <a href="https://open-psa.github.io/" style="color:inherit;text-decoration:underline;">OpenPSA MEF</a> &mdash; an XML-based standard for fault-tree data exchange between PSA tools.
+        </div>
+    </section>
+
+    <section class="page-section" id="stack">
+        <h2>Technical Stack</h2>
+        <p class="lede">
+            All modules are single-file HTML applications. Dependencies load from CDNs at runtime; no Node.js, <code class="inline">npm install</code>, or build process is required.
+        </p>
+        <table class="guide-table">
+            <thead><tr><th>Technology</th><th>Purpose</th></tr></thead>
+            <tbody>
+                <tr><td><strong>React 18</strong></td><td>UI component framework</td></tr>
+                <tr><td><strong>Babel Standalone</strong></td><td>JSX transformation at runtime</td></tr>
+                <tr><td><strong>Tailwind CSS</strong></td><td>Utility-first styling</td></tr>
+                <tr><td><strong>HTML5 Canvas</strong></td><td>Fault tree, event tree, and importance-measure rendering</td></tr>
+                <tr><td><strong>Mermaid.js</strong></td><td>FMEA diagrams (KUREAS-SYS) and POL flowcharts (KUREAS-SEQ)</td></tr>
+                <tr><td><strong>IndexedDB</strong></td><td>Project persistence (KUREAS-FTL)</td></tr>
+                <tr><td><strong>localStorage</strong></td><td>Settings persistence (all modules)</td></tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 12px; font-size: 13px; color: #64748b;">
+            Tested on Chrome, Edge, Firefox, and Safari. Any modern browser with ES6+ support is sufficient. Chrome or Edge is recommended for File System Access API features used by the planned KUREAS-KNOW folder operations.
+        </p>
+    </section>
+
+    <section class="page-section" id="regulatory">
+        <h2>Regulatory References</h2>
+        <p class="lede">
+            KUREAS incorporates data and methodology from the following NRC publications:
+        </p>
+        <ul class="ref-list">
+            <li><strong>NUREG-2169</strong> &mdash; <em>Nuclear Power Plant Fire Ignition Frequency and Non-Suppression Probability Estimation Using the Updated Fire Events Database</em>. Table&nbsp;4-4 fire ignition frequencies are built into KUREAS-HA.</li>
+            <li><strong>NUREG/CR-7039</strong> &mdash; <em>Systems Analysis Programs for Hands-on Integrated Reliability Evaluations (SAPHIRE) Version&nbsp;8</em>. SAPHIRE file format specifications used throughout the suite.</li>
+            <li><strong>NUREG-CR-6883</strong> &mdash; <em>The SPAR-H Human Reliability Analysis Method</em> (Gertman, Blackman, Byers, Marble, Smith, 2005).</li>
+            <li><strong>INL/EXT-10-18533</strong> &mdash; <em>SPAR-H Step-by-Step Guidance</em> (Whaley, Kelly, Boring, Galyean, 2011).</li>
+        </ul>
+    </section>
+
+    <section class="page-section" id="assurance">
+        <h2>Analyst Discipline</h2>
+        <div class="callout callout-tip">
+            <strong>No server, no hidden state</strong>
+            Every module runs from static HTML and exchanges files through browser upload / download, IndexedDB, and localStorage. The basis stays with the artifact rather than living on a remote service.
+        </div>
+        <div class="callout callout-info">
+            <strong>Traceability is preserved</strong>
+            Hazard rationale, SSC metadata, failure-mode parameters, cut sets, importance measures, generated graphics, and report sections are all retained as inspectable artifacts &mdash; either inside <code class="inline">.KNOW*</code> files or as exported SAPHIRE / OpenPSA files.
+        </div>
+        <div class="callout callout-warn">
+            <strong>Engineering judgment remains the analyst's</strong>
+            Large models, exact quantification, CCF modeling, and any regulatory submissions should be benchmarked against the organization's accepted PRA toolchain. KUREAS-FTL and KUREAS-SYS ship with browser-based test harnesses (see <a href="#guides" style="color:inherit;text-decoration:underline;">Guides &amp; QA</a>) that can support that benchmarking.
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>
+            <strong style="color:#1e293b;">KUREAS</strong> &mdash; MIT License, Copyright &copy; 2025&ndash;2026 Curtis Lee Smith. See <a href="LICENSE">LICENSE</a> and individual module files for full license text.
+        </p>
+        <p>
+            Developed by Curtis Lee Smith and Claude.ai (Anthropic). For the long-form narrative, open <a href="README.md">README.md</a>.
+        </p>
+    </footer>
+
+</main>
+
+<script>
+    (function () {
+        var buttons = Array.prototype.slice.call(document.querySelectorAll('.tabbar [role="tab"]'));
+        var panels  = Array.prototype.slice.call(document.querySelectorAll('.tab-panel[role="tabpanel"]'));
+
+        function activate(button) {
+            var targetId = button.getAttribute('data-tab');
+            buttons.forEach(function (candidate) {
+                var selected = candidate === button;
+                candidate.setAttribute('aria-selected', selected ? 'true' : 'false');
+                candidate.tabIndex = selected ? 0 : -1;
+            });
+            panels.forEach(function (panel) {
+                panel.hidden = panel.id !== targetId;
+            });
+        }
+
+        var initial = buttons.find(function (b) { return b.getAttribute('aria-selected') === 'true'; }) || buttons[0];
+        if (initial) activate(initial);
+
+        buttons.forEach(function (button, index) {
+            button.addEventListener('click', function () { activate(button); });
+            button.addEventListener('keydown', function (event) {
+                var forward  = event.key === 'ArrowRight' || event.key === 'ArrowDown';
+                var backward = event.key === 'ArrowLeft'  || event.key === 'ArrowUp';
+                if (!forward && !backward) return;
+                event.preventDefault();
+                var offset = forward ? 1 : -1;
+                var next = buttons[(index + offset + buttons.length) % buttons.length];
+                next.focus();
+                activate(next);
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
